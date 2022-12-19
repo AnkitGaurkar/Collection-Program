@@ -1,0 +1,37 @@
+/*Deque:-
+ * Deque interface extends to Queue interface..
+ * in this we can add and remove elements from both side..
+ * Deque stands for Double Ended Queue..
+ * 
+ * Array Deque class implements to Deque interface..
+ * its is use facilities of Deque..
+ * 
+ * ArrayDeque is faster than ArrayList and stack and has no capacity restriction...
+ * 
+ * 
+ * 
+ */
+package com;
+
+import java.util.ArrayDeque;
+
+class Demo2
+{
+	public static void main(String[]args)
+	{
+		ArrayDeque<Object> aq=new ArrayDeque<Object>();
+		
+		aq.add("Ankit");
+		aq.add("Ankit");
+		aq.add(56);
+		aq.add("Rohan");
+		aq.add(12);
+		aq.add("Ankit");
+		
+		for(Object arr:aq)
+		{
+			System.out.println(arr);
+		}
+	}		
+	
+}
