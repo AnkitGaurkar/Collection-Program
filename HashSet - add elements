@@ -1,0 +1,38 @@
+/*Set Interface:-
+ * Set interface extends to Collection Interface..
+ * it present in java.util.package.
+ * Set is unorder set elements and its does not accept duplicate elements..
+ * its provides HashSet, LinkedHashSet, and TreeSet..
+ * 
+ * HashSet:-
+ * HashSet class implements SetInterface..
+ * It represents the collection that uses the hash table for storage..
+ * It Contains unique values...
+ * 
+ */
+package com;
+
+import java.util.ArrayDeque;
+import java.util.HashSet;
+import java.util.Iterator;
+
+class Demo2
+{
+	public static void main(String[]args)
+	{
+		HashSet<Object> hs=new HashSet<Object>();
+		hs.add("Ankit");
+		hs.add("Ankit"); //its compile but does not print because set does not accept duplicate value..
+		hs.add("Rohan");
+		hs.add("Prashant");
+		hs.add("Sunil");
+		hs.add(34);
+		
+		Iterator<Object> itr= hs.iterator();
+						while (itr.hasNext())
+						{
+							System.out.println(itr.next());
+				}
+	}		
+	
+}
