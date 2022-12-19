@@ -1,0 +1,22 @@
+package com;
+
+import java.util.Iterator;
+import java.util.Vector;
+
+class Demo2
+{
+	public static void main(String[]args)
+	{
+		Vector<Object> v1=new Vector<Object>();
+		v1.add(45);
+		v1.add("Ankit");
+		v1.add(54);
+		
+		Iterator<Object> i1=v1.iterator();
+		while(i1.hasNext())
+		{
+			System.out.println(i1.next());
+		}
+	}		
+	
+}
