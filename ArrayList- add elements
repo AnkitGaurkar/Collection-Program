@@ -1,0 +1,25 @@
+package com;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+class Demo2
+{
+	public static void main(String[]args)
+	{
+		ArrayList<Object>a1=new ArrayList<Object>();
+		
+		a1.add(12);
+		a1.add(45);
+		a1.add(56);
+		a1.add("Ankit");
+		a1.add(67);
+		
+		Iterator<Object> i1=a1.iterator();
+		
+		while(i1.hasNext())
+		{
+			System.out.println(i1.next());
+		}
+		
+	}
+}
