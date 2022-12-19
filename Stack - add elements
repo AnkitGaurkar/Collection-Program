@@ -1,0 +1,37 @@
+/* stack is subclass of vector..
+ * It implements the last-In-First-Out data structure..
+ * Stack is cotains all the methods of vector class and
+ * its provide own method like push(), pop(),peek() etc..
+ * 
+ * 
+ * 
+ */
+package com;
+
+import java.util.Iterator;
+import java.util.Stack;
+
+class Demo2
+{
+	public static void main(String[]args)
+	{
+		Stack <Object> st1=new Stack<Object>();
+		
+		st1.add(45);
+		st1.push(45);
+		st1.push(76);
+		st1.push("Ankit");
+		st1.add(56);
+		
+		st1.pop();//remove the top obj of this stack
+		
+		Iterator<Object> i1=st1.iterator();
+		
+		while(i1.hasNext())
+		{
+			System.out.println(i1.next());
+		}
+		
+	}		
+	
+}
