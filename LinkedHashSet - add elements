@@ -1,0 +1,33 @@
+/*LinkedHashSet class:-
+ * Its is class.
+ * it is represent to LinkList class.
+ * and it extends to the HashSet class.
+ * It is implements to the set interface..
+ * it also contain unique elements.
+ * It maintain the insertion order. and it gives permit to null value.
+ */
+package com;
+
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+class Demo2
+{
+	public static void main(String[]args)
+	{
+		
+		LinkedHashSet<Object>lhs=new LinkedHashSet<Object>();
+		lhs.add("Ankit");
+		lhs.add("");
+		lhs.add("Ankit");
+		lhs.add("Rohan");
+		lhs.add(20);
+		
+		Iterator<Object>i1=lhs.iterator();
+		while(i1.hasNext())
+		{
+			System.out.println(i1.next());
+		}
+		
+	}	
+	
+}
