@@ -1,0 +1,38 @@
+/*Sorted Interface :-
+ *Sorted Set is alternate of Set interface..
+ *beacause its providing total ordering elements.
+ *The elements are arranged by increasing oreder means Ascending order.
+ *
+ * TreeSet class:-
+ * TreeSet class implements to Set Interface  that uses Treee for storage..like hashset(HashSet is use HashTable)..
+ * TreeSet also contain Unique Elements..
+ * The access and retrival time quite fast than other..
+ * and treeset is sorted is ascending order..
+ * 
+ */
+package com;
+
+import java.util.Iterator;
+import java.util.TreeSet;
+
+class Demo2
+{
+	public static void main(String[]args)
+	{
+		TreeSet<Object>ts=new TreeSet<Object>();
+		//ts.add("Ankit");
+		//ts.add("Ankit");
+		//ts.add("");
+		ts.add(45);
+		ts.add(65);
+		ts.add(46);
+		
+		Iterator<Object>itr=ts.iterator();
+		while(itr.hasNext())
+		{
+			System.out.println(itr.next());
+		}	
+		
+	}	
+	
+}
