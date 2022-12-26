@@ -1,3 +1,13 @@
+/*ArrayList is sequential data storage or maintain insertion order..
+array can have duplicate data elements.
+arrayList class is non Synchronized..
+ArrayList slower than LinkedList beacause in ArrayList lot of shifting required
+if any element is removed form list..
+We cannot create arrayList using primitive data type beacause here we are use Non primitive data type.
+Wrapper classes like Integer, String etc..
+*/
+
+
 package com;
 
 import java.util.ArrayList;
