@@ -1,0 +1,39 @@
+package com;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Demo2 {
+
+	public static void main(String[] args) {
+		
+		ArrayList<String>al=new ArrayList<String>();
+		al.add("Ankit");
+		al.add("Rohan");
+		al.add("Sunil");
+		al.add("Sangita");
+		al.add("Gaurkar");
+		al.add("Ankit");
+		
+		System.out.println("Using get method:-"+" "+al.get(2));
+		
+		al.set(5, "Hello");
+		
+		System.out.println("Traversing using Iterator:-");
+		Iterator<String>i1=al.iterator();
+		while(i1.hasNext())
+		{
+			System.out.println(i1.next());
+		}
+		System.out.println();
+		System.out.println("Traversing using While Loop:-");
+		
+		for(String i2:al)
+		{
+		System.out.println(i2+" ");	
+		}
+	}
+
+	
+	}
+
