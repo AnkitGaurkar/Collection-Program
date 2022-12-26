@@ -1,0 +1,45 @@
+package com;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Demo2 {
+
+	public static void main(String[] args) {
+		
+		ArrayList<String>al=new ArrayList<String>();
+		al.add("Ankit");
+		al.add("Rohan");
+		al.add("Sunil");
+		al.add("Sangita");
+		al.add("Gaurkar");
+		al.add("Ankit");
+		
+		Collections.sort(al);//static method
+		System.out.println(al);
+		
+		for(String name:al)
+		{
+			System.out.println(name+" "+"Gaurkar");
+		}
+		
+		System.out.println();
+		ArrayList<Integer>a1=new ArrayList<Integer>();//but here only we can use non- primitive data type(Wrapper classes)
+		a1.add(33);
+		a1.add(44);
+		a1.add(12);
+		a1.add(33);
+		a1.add(65);
+		
+		Collections.sort(a1);
+		System.out.println(a1);
+		
+		for(Integer no:a1)//here we can use primitive data type also
+		{
+			System.out.println(no);
+		}
+	}
+
+	
+	}
+
