@@ -1,1 +1,45 @@
-# Collection-Program
+package com;
+
+import java.util.ArrayList;
+import java.util.ListIterator;
+
+public class Demo2 {
+
+	public static void main(String[] args) {
+		
+		ArrayList<String>al=new ArrayList<String>();
+		al.add("Ankit");
+		al.add("Rohan");
+		al.add("Sunil");
+		al.add("Sangita");
+		al.add("Gaurkar");
+		al.add("Ankit");
+		
+		
+		System.out.println("Traversing using ListIterator with previous method:-");
+		ListIterator<String>l1=al.listIterator(al.size());
+		while(l1.hasPrevious())// This method is use for traversing of backward direction means reverse order
+		{
+			String s=l1.previous();
+			System.out.println(s);
+		}
+		System.out.println("Traversing using ListIterator with hasNext():-");
+		
+		while(l1.hasNext())
+		{
+			System.out.println(l1.next());
+		}
+		
+		System.out.println("Traversing using  for Loop:-");
+		
+		for(int i=0;i<al.size();i++)
+		{
+			System.out.println(al.get(i));
+		}
+		
+	}
+
+	
+	}
+
+
