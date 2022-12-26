@@ -1,0 +1,48 @@
+package com;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
+
+public class Demo2 {
+	int rollno;
+	String name;
+	static String clgname="Shivaji Science";
+	
+	public Demo2(int rollno,String name)
+	{
+		this.rollno=rollno;
+		this.name=name;
+	}
+	 void disp()
+	{
+		System.out.println(rollno+" "+name+" "+clgname);
+	}
+	public static void main(String[] args) {
+		
+		Demo2 d2=new Demo2(1,"Ankit");
+		d2.disp();
+		Demo2 d3=new Demo2(2,"Rohan");
+		d3.disp();
+		Demo2 d4=new Demo2(3,"Sunil");
+		d4.disp();
+		
+		ArrayList<Demo2>a1=new ArrayList<Demo2>();
+		a1.add(d2);
+		a1.add(d3);
+		a1.add(d4);
+		
+		System.out.println("Traversing using Iterator:-");
+		
+		Iterator<Demo2> i1=a1.iterator();
+		while(i1.hasNext())
+		{
+			Demo2 d=(Demo2)i1.next();
+			System.out.println(d.rollno+" "+d.name+" "+clgname);
+		}
+		
+	}
+
+	
+	}
+
