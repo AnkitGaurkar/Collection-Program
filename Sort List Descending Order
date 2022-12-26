@@ -1,0 +1,28 @@
+package com;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
+public class Demo2 {
+
+	
+	public static void main(String[] args) {
+		
+		ArrayList<String>a1=new ArrayList<String>();
+		
+		a1.add("Ankit");
+		a1.add("Rohan");
+		a1.add("Sunil");
+		a1.add("Sangita");
+		a1.add("Gaurkar");
+		
+		System.out.println("Before Sorting:"+ a1);
+		
+		Collections.sort(a1,Collections.reverseOrder());//It is use for sorting of list descending order
+		
+		System.out.println("After above method:"+ a1);
+	}
+	
+	}
+
