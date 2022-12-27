@@ -1,0 +1,33 @@
+package com;
+
+
+import java.util.Iterator;
+import java.util.TreeSet;
+
+public class Demo2 {
+
+	
+	public static void main(String[] args) {
+	
+	TreeSet<String>t1=new TreeSet<String>();
+	t1.add("Ankit");
+	t1.add("Ankit");
+	t1.add("Rohan");
+	t1.add("Sunil");
+	t1.add("Gaurkar");
+	t1.add("Sangita");
+	
+	System.out.println(t1);
+	
+	Iterator<String> i=t1.descendingIterator();// its use for reverse elements ...and this method only support linkedList and TreeSet 
+	
+		while(i.hasNext())
+		{
+			System.out.println(i.next());
+		}
+		
+		System.out.println("Lowest Value:-"+t1.pollFirst());//its use for to chake lowest value
+		System.out.println("Highest Value:-"+t1.pollLast());//its chake for highest value
+	}
+}
+
