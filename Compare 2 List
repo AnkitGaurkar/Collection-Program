@@ -1,0 +1,39 @@
+package com;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+
+public class Demo2 {
+
+	
+	public static void main(String[] args) {
+	
+		System.out.println("First List:-");
+		LinkedList<String>l1=new LinkedList<String>();
+		l1.add("Ankit");
+		l1.add("Sunil");
+		l1.add("Sangita");
+		l1.add("Rohan");
+		//l1.add("A");
+		
+		System.out.println(l1);
+	
+		System.out.println("Second list:-");
+		ArrayList<String>l2=new ArrayList<String>();
+		l2.add("Ankit");
+		l2.add("Sunil");
+		l2.add("Sangita");
+		l2.add("Rohan");
+		
+		System.out.println(l2);
+		
+		System.out.println("Compare 2 List:-");
+		boolean b=l1.equals(l2);
+		
+		System.out.println(b);
+	}
+	
+	
+}
+
