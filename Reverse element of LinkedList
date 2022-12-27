@@ -1,0 +1,28 @@
+package com;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.ListIterator;
+
+public class Demo2 {
+
+	
+	public static void main(String[] args) {
+	
+		LinkedList<String>l2=new LinkedList<String>();
+		l2.add("Ankit");
+		l2.add("Sunil");
+		l2.add("Gaurkar");
+		
+		Iterator<String>i1=l2.descendingIterator();
+		
+		while(i1.hasNext())
+		{
+			System.out.println(i1.next());
+		}
+	}
+	
+	}
+
