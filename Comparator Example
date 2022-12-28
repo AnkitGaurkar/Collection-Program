@@ -1,0 +1,126 @@
+/*Comparator Interface :-
+ * Comparator is a interface.
+ * its found in java.util.package
+ * and contains 2  method is compare(Object obj1, Object obj2) and equals(Object element).
+ * Comparable is useful for  order the object of user define class.
+ * it is provide multiple sorting of elements on the basis of any data member.
+ * 
+ 
+ * Collection Class :- provides static method for sorting ,
+ * if Collection element of Set or Map so we can use there TreeSet or TreeMap..
+ * but However, we cannot sort list interface element..
+ * 
+ *   String Object and Wrapper classes Object implements the Comparable interface by default..
+ *   
+ */
+ 
+ Student.java
+ 
+package com;
+import java.util.ArrayList;
+
+class Student
+{
+	int rollno;
+	String name;
+	String clgName;
+	
+	public Student(int rollno, String name, String clgName)
+	{
+		this.rollno=rollno;
+		this.name=name;
+		this.clgName=clgName;
+		
+	}
+
+}
+
+RollNoComparator.java
+
+package com;
+
+import java.util.Comparator;
+
+public class RollNoComparator implements Comparator<Student> {
+
+	@Override
+	public int compare(Student o1, Student o2) {
+		// TODO Auto-generated method stub
+		
+		if(o1.rollno==o2.rollno)
+		{
+		return 0;
+		}
+		else if(o1.rollno>o2.rollno)
+		{
+		return 1;
+		}
+		else
+		{
+			return -1;
+		}
+	
+
+}
+}
+
+NameComparator.java
+
+package com;
+
+import java.util.Comparator;
+
+public class NameComparator implements Comparator<Student> 
+{
+
+	public int compare(Student s1, Student s2)
+	{
+		
+		return  s1.name.compareTo(s2.name);
+		
+	}
+
+	
+}
+
+Test.java
+package com;
+
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		LinkedList<Student>l1=new LinkedList<Student>();
+		l1.add(new Student(99,"Ankit","PIBM"));
+		l1.add(new Student(7,"Priyanka", "SSG"));
+		l1.add(new Student(2,"Rohan","MMV"));
+		
+		System.out.println("Its name Sorting:-");
+		Collections.sort(l1,new NameComparator());
+		
+		for(Student std:l1)
+		{
+			System.out.println(std.rollno+" "+std.name+" "+std.clgName);
+		}
+		
+		System.out.println("Its RollNo Sorting:-");
+		
+		Collections.sort(l1,new RollNoComparator());
+		
+		Iterator<Student>i1=l1.iterator();
+		while(i1.hasNext())
+		{
+			Student s=(Student)i1.next();
+			System.out.println(s.rollno+" "+s.name+" "+s.clgName);
+		}
+	}
+
+}
+
+
