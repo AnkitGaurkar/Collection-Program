@@ -1,0 +1,79 @@
+/*Comparable Interface :-
+ * Comparable is an interface.
+ * its found in java.lang.package
+ * and contains only one method is compareTo(Object obj).
+ * Comparable is useful for  order the objects of user define class.
+ * it is provide  sorting of elements on the basis of single data member.
+ * 
+ * Collection Class :- provides static method for sorting ,
+ * if Collection element of Set or Map so we can use there TreeSet or TreeMap..
+ * but However, we cannot sort list interface element..
+ * 
+ *   String Object and Wrapper classes Object implements the Comparable interface by default..
+ *   
+ */
+ Student.java
+
+package com;
+import java.util.ArrayList;
+
+public class Student implements Comparable<Student> {
+
+	int id;
+	String name;
+	String clgName;
+
+	public Student(int id,String name,String clgName)
+	{
+		this.id=id;
+		this.name=name;
+		this.clgName=clgName;
+	}
+	 public String toString()
+	 {
+		return id+" "+name+" "+clgName;
+
+	 }
+	@Override
+	public int compareTo(Student d) {
+		// TODO Auto-generated method stub
+		if(id>d.id)    // if we want sort descending order then use following type:
+                   // if (id<d.id) { return 1;} else if (id>d.id) { return -1;}...........like this...
+		{
+		return 1;
+	}
+		else if(id<d.id)
+		{
+			return -1;
+		}
+		else
+		{
+			return 0;
+		}	
+}
+}
+Test.java
+package com;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArrayList<Student>a1=new ArrayList<Student>();
+		a1.add(new Student(9, "Ankit", "PIBM"));
+		a1.add(new Student(8,"Sunil","NHM"));
+		a1.add(new Student(2,"An","Sppp"));
+		a1.add(new Student(44,"Ankitt","PPM"));
+
+
+		Collections.sort(a1);
+
+		System.out.println(a1.toString());
+
+	}
+
+}
