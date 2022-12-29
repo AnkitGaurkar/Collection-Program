@@ -1,0 +1,55 @@
+/*LinkedHashMap:-
+ * LinkedHashMap class is providing HashTable & LinkedList implementation of the Map interface 
+ * with predictable iteration order.
+ * it inherit to HashMap class and implements to Map interface.
+ * 
+ * LinkedHashMap contain values on the basis of keys.
+ * its contain unique value only.
+ * its have one null key and multiple null values..
+ * it is Non Synchronized..
+ * It is maintain insertion Order.
+ * 
+ * 
+ * 
+ * 
+ */
+package com;
+
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class LinkedHashMapEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		LinkedHashMap<Integer, String>lhm=new LinkedHashMap<Integer, String>();
+		lhm.put(4, "Ankit");
+		lhm.put(2, "Sunil");
+		lhm.put(8, "Rohan");
+		lhm.put(1, "Sangita");
+		
+		System.out.println(lhm);
+		
+		System.out.println("Traverse using Iterator:-");
+		Set s=lhm.entrySet();
+		Iterator i1=s.iterator();
+		while(i1.hasNext())
+		{
+			Map.Entry entry=(Map.Entry)i1.next();
+			System.out.println(entry.getKey()+" "+entry.getValue());
+		}
+		
+		System.out.println();
+		System.out.println("Traverse using forEach Loop:-");
+		for(Map.Entry<Integer,String>entry:lhm.entrySet())
+		{
+			System.out.println(entry.getKey()+" "+entry.getValue());
+		}
+		
+		
+	}
+
+}
