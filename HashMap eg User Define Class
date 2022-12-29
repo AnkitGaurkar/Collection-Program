@@ -1,0 +1,45 @@
+package com;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapInterface {
+	int id;
+	String name;
+	String clgName;
+
+	public MapInterface(int id, String name, String clgName) {
+		//super();
+		this.id = id;
+		this.name = name;
+		this.clgName = clgName;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Map<Integer, MapInterface> hm=new HashMap<Integer, MapInterface>();
+		
+		MapInterface m1=new MapInterface(777, "Ankit", "SPPU");
+		MapInterface m2=new MapInterface(888,"Sunil", "MMMV");
+		MapInterface m3=new MapInterface(999,"ROhan", "HHD");
+		MapInterface m4=new MapInterface(3333,"Sangita", "AAB");
+		
+		
+		hm.put(1, m1);
+		hm.put(2, m2);
+		hm.put(3, m3);
+		hm.put(1, m4);
+		
+		for(Map.Entry <Integer,MapInterface>entry:hm.entrySet())
+		{
+			int key=entry.getKey();
+			MapInterface mi=entry.getValue();
+			
+			System.out.println(key+" Details:-");
+			System.out.println(mi.id+" "+mi.name+" "+mi.clgName);
+		}
+		
+	}
+
+}
