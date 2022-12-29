@@ -1,0 +1,35 @@
+/*HashTable:-
+ * HashTable class provide implementation of hashtable, which maps keys to values.
+ * 
+ * HashTable is an array of list.it is known as Bucket.
+ * A Hashtable contain values on the basis keys.
+ * HashTable contain unique elements(keys and values)..
+ * Hashtable class does not allow null key and values..
+ * it is Synchronized..
+ * 
+ * 
+ */
+package com;
+
+import java.util.Hashtable;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class TreeMapEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Hashtable<Integer,String> t1=new Hashtable<Integer,String>();
+		t1.put(3, "SUnil");
+		t1.put(2, "Rohan");
+		t1.put(4, "Ankit");
+		t1.put(3, "Sunil");
+		
+		for(Map.Entry<Integer, String>entry:t1.entrySet())
+		{
+			System.out.println(entry.getKey()+" "+entry.getValue());
+		}
+	}
+
+}
