@@ -2,7 +2,7 @@
  * Comparator is a interface.
  * its found in java.util.package
  * and contains 2  method is compare(Object obj1, Object obj2) and equals(Object element).
- * Comparable is useful for  order the object of user define class.
+ * Comparator is useful for  order the object of user define class.
  * it is provide multiple sorting of elements on the basis of any data member.
  * 
  
